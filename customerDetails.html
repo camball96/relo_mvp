@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-surface": "#0b0f0e",
+            "surface-container-high": "#e2eae7",
+            "outline-variant": "#abb4b1",
+            "surface-dim": "#d3dcd9",
+            "on-surface-variant": "#58615f",
+            "surface-container": "#e9efed",
+            "surface-tint": "#4c6456",
+            "on-primary-fixed-variant": "#496152",
+            "inverse-primary": "#d9f5e2",
+            "primary-dim": "#40584a",
+            "primary-fixed": "#cee9d6",
+            "on-primary-fixed": "#2d4437",
+            "on-surface": "#2c3432",
+            "inverse-on-surface": "#9a9e9c",
+            "on-error-container": "#6e0a12",
+            "secondary-container": "#c4eaea",
+            "surface-variant": "#dbe4e2",
+            "tertiary": "#6f5c47",
+            "surface-container-highest": "#dbe4e2",
+            "on-secondary-container": "#355759",
+            "on-secondary-fixed": "#214546",
+            "on-secondary-fixed-variant": "#3e6162",
+            "tertiary-dim": "#62503c",
+            "secondary": "#426566",
+            "secondary-fixed-dim": "#b6dbdc",
+            "secondary-fixed": "#c4eaea",
+            "on-tertiary-fixed": "#4f3e2b",
+            "error-container": "#fa746f",
+            "tertiary-fixed-dim": "#edd3b9",
+            "tertiary-fixed": "#fce1c6",
+            "on-background": "#2c3432",
+            "primary": "#4c6456",
+            "on-error": "#fff7f6",
+            "on-primary-container": "#3f5749",
+            "on-primary": "#e6ffed",
+            "primary-container": "#cee9d6",
+            "error": "#a83836",
+            "surface-container-low": "#f0f5f2",
+            "surface": "#f7faf8",
+            "secondary-dim": "#36595a",
+            "surface-bright": "#f7faf8",
+            "on-tertiary-container": "#63503c",
+            "on-tertiary-fixed-variant": "#6d5a45",
+            "error-dim": "#67040d",
+            "tertiary-container": "#fce1c6",
+            "outline": "#747d7a",
+            "primary-fixed-dim": "#c0dbc9",
+            "background": "#f7faf8",
+            "on-tertiary": "#fff7f3",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary": "#e1ffff"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-panel {
+      background: rgba(247, 250, 248, 0.7);
+      backdrop-filter: blur(20px);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+  <!-- Sidebar Navigation -->
+  <aside class="h-screen w-64 fixed left-0 top-0 bg-emerald-50 dark:bg-emerald-950 flex flex-col py-6 px-4 gap-8">
+    <div class="flex items-center gap-3 px-2">
+      <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary">
+        <span class="material-symbols-outlined">filter_vintage</span>
+      </div>
+      <div>
+        <h1 class="text-xl font-black text-emerald-900 dark:text-emerald-50 leading-none">relo</h1>
+        <p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mt-1">Botanical Archivist</p>
+      </div>
+    </div>
+    <nav class="flex-1 space-y-1">
+      <a class="flex items-center gap-3 px-4 py-3 text-emerald-700/60 dark:text-emerald-400/60 hover:text-emerald-900 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 transition-all group"
+        href="dashboard.html">
+        <span class="material-symbols-outlined">dashboard</span>
+        <span class="font-label text-sm uppercase tracking-wider">Dashboard</span>
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 bg-emerald-200/50 dark:bg-emerald-800/50 text-emerald-900 dark:text-emerald-50 rounded-xl font-bold translate-x-1 duration-200 group"
+        href="customers.html">
+        <span class="material-symbols-outlined">group</span>
+        <span class="font-label text-sm uppercase tracking-wider">Customers</span>
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 text-emerald-700/60 dark:text-emerald-400/60 hover:text-emerald-900 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 transition-all group"
+        href="#">
+        <span class="material-symbols-outlined">subscriptions</span>
+        <span class="font-label text-sm uppercase tracking-wider">Subscriptions</span>
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 text-emerald-700/60 dark:text-emerald-400/60 hover:text-emerald-900 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 transition-all group"
+        href="#">
+        <span class="material-symbols-outlined">payments</span>
+        <span class="font-label text-sm uppercase tracking-wider">Revenue</span>
+      </a>
+    </nav>
+    <div class="mt-auto space-y-1">
+      <button
+        class="w-full mb-6 py-3 px-4 bg-primary text-on-primary rounded-xl font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+        <span class="material-symbols-outlined">person_add</span>
+        <span>Add Customer</span>
+      </button>
+      <a class="flex items-center gap-3 px-4 py-3 text-emerald-700/60 hover:text-emerald-900 transition-all" href="#">
+        <span class="material-symbols-outlined">help</span>
+        <span class="font-label text-sm uppercase tracking-wider">Help Center</span>
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 text-emerald-700/60 hover:text-emerald-900 transition-all" href="#">
+        <span class="material-symbols-outlined">logout</span>
+        <span class="font-label text-sm uppercase tracking-wider">Sign Out</span>
+      </a>
+    </div>
+  </aside>
+  <!-- Main Content Stage -->
+  <main class="ml-64 min-h-screen bg-surface p-12">
+    <!-- Top App Bar Content (Integrated) -->
+    <header class="flex justify-between items-center mb-12">
+      <div class="flex items-center gap-4">
+        <button
+          class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <nav class="flex items-center gap-2 text-on-surface-variant text-sm font-label">
+          <span>Customers</span>
+          <span class="material-symbols-outlined text-xs">chevron_right</span>
+          <span class="text-primary font-semibold">Elena Thorne</span>
+        </nav>
+      </div>
+      <div class="flex items-center gap-3">
+        <button
+          class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+        </button>
+        <button
+          class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined" data-icon="settings">settings</span>
+        </button>
+        <div
+          class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden ml-2 ring-2 ring-primary-container ring-offset-2 ring-offset-background">
+          <img alt="User avatar"
+            data-alt="professional portrait of a young woman with a friendly smile, soft natural lighting, blurred garden background"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUhvacF9E2MRyiIdj5wv51Q_PMp1mqhfYaQ2h7gLQen074f4qS1jyiSWVdAcGr-i4BIE2fm5CD6HG0DBH9Qg98OS6810-8acYPuNfLi0EAz1iG5236CUSmLIO0CgHKaCfgtBpAsAN8cLhDTbl59KbyRPV-7oLbJnpF3F6p01WpX026NoG6Bfb7nKlUNsiMHDsTypniZV59fHhVooImk9KmBE9Lc-SwkO3SkCOIv8C10Di-rlRvk-hzm2XtPinm8bjDFb5RryNsx6E" />
+        </div>
+      </div>
+    </header>
+    <!-- Customer Profile Hero Section (Asymmetric Layout) -->
+    <section class="grid grid-cols-12 gap-8 mb-16">
+      <div
+        class="col-span-8 bg-surface-container-low rounded-[2rem] p-10 flex items-start gap-8 relative overflow-hidden">
+        <!-- Abstract geometry watermark -->
+        <div class="absolute -right-20 -top-20 opacity-5 pointer-events-none">
+          <span class="material-symbols-outlined text-[300px]"
+            style="font-variation-settings: 'wght' 100;">filter_vintage</span>
+        </div>
+        <div class="w-40 h-40 rounded-[2.5rem] overflow-hidden flex-shrink-0 shadow-xl ring-4 ring-white">
+          <img alt="Elena Thorne"
+            data-alt="high-end editorial portrait of a woman with dark hair, focused expression, cinematic lighting with warm tones"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-05QOk_oCWFQy2W1sWxIugfKw2-CP75VFzVdYxC5aBMAYsVpL_cbY8mwL7dcpp3RRztB5eGUWmK-prPWYtujX8mqVH5itR5NR4PPnmlUkSBKj8r3WDpSa31NfHMtpKTeXMAWeDCsRIE6fjxTYL40wBew_uV54fprP-PiJG5_oglWqLF7rCeShmxdmoM2TWrAORUoF14CleWzxrUnwaaxW6-cPTsx23EFOeYL2BpZBj-rLskJqqUOsbswNEb7GOU_fKTpJPPEl1jo" />
+        </div>
+        <div class="flex-1">
+          <div class="flex justify-between items-start">
+            <div>
+              <span
+                class="inline-block px-3 py-1 bg-primary-container text-on-primary-container text-[10px] font-bold uppercase tracking-widest rounded-full mb-3">Premium
+                Partner</span>
+              <h2 class="text-5xl font-extrabold tracking-tight text-on-surface mb-2">Elena Thorne</h2>
+              <p class="text-on-surface-variant font-medium flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm">alternate_email</span>
+                elena.thorne@archivist.io
+              </p>
+            </div>
+            <button
+              class="bg-surface-container-lowest text-primary p-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all duration-300">
+              <span class="material-symbols-outlined">edit</span>
+            </button>
+          </div>
+          <div class="grid grid-cols-3 gap-6 mt-8">
+            <div class="bg-surface-container-lowest/60 p-4 rounded-2xl">
+              <p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Location</p>
+              <p class="font-semibold text-on-surface">Portland, OR</p>
+            </div>
+            <div class="bg-surface-container-lowest/60 p-4 rounded-2xl">
+              <p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Customer Since
+              </p>
+              <p class="font-semibold text-on-surface">Oct 12, 2021</p>
+            </div>
+            <div class="bg-surface-container-lowest/60 p-4 rounded-2xl">
+              <p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Status</p>
+              <div class="flex items-center gap-1.5 text-primary font-bold">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                Active
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Quick Stats/Side Card -->
+      <div class="col-span-4 space-y-6">
+        <div class="bg-primary p-8 rounded-[2rem] text-on-primary shadow-lg shadow-primary/10">
+          <h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+            <span class="material-symbols-outlined">analytics</span>
+            Lifetime Value
+          </h3>
+          <div class="text-4xl font-extrabold mb-1">$4,280.00</div>
+          <p class="text-primary-fixed/80 text-sm mb-6">+12% from last quarter</p>
+          <div class="w-full bg-on-primary/10 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-on-primary w-3/4 h-full rounded-full"></div>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest p-6 rounded-[2rem] border-2 border-surface-container">
+          <h3 class="text-sm font-label uppercase tracking-widest text-on-surface-variant mb-4">Internal Note</h3>
+          <p class="text-sm text-on-surface leading-relaxed italic">
+            "Prefers digital invoices over mail. Highly interested in the upcoming Greenhouse expansion set."
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Linked Products Section -->
+    <section class="mb-16">
+      <div class="flex justify-between items-end mb-8">
+        <div>
+          <h3 class="text-2xl font-bold text-on-surface tracking-tight">Linked Products</h3>
+          <p class="text-on-surface-variant text-sm mt-1">Managing 4 active botanical subscriptions</p>
+        </div>
+        <button
+          class="bg-primary-fixed text-on-primary-fixed px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-primary-container transition-all group">
+          <span class="material-symbols-outlined text-xl group-hover:rotate-90 transition-transform">add_circle</span>
+          Link New Product
+        </button>
+      </div>
+      <!-- Product Cards Bento Grid -->
+      <div class="grid grid-cols-3 gap-6">
+        <!-- Product Card 1 -->
+        <div
+          class="bg-surface-container-lowest group relative rounded-[1.5rem] p-6 hover:translate-y-[-4px] transition-all duration-300">
+          <div
+            class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-[1.5rem]">
+          </div>
+          <div class="relative z-10">
+            <div class="flex justify-between items-start mb-6">
+              <div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-3xl">psychology</span>
+              </div>
+              <span
+                class="text-[10px] font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded">SUBSCRIPTION</span>
+            </div>
+            <h4 class="text-lg font-bold text-on-surface mb-1">Moss Curator Pro</h4>
+            <p class="text-xs text-on-surface-variant mb-4">Premium Terrarium Management</p>
+            <div class="flex items-center justify-between pt-4 border-t border-surface-container/50">
+              <div>
+                <p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Purchased</p>
+                <p class="text-sm font-semibold text-on-surface">Jan 15, 2024</p>
+              </div>
+              <span
+                class="material-symbols-outlined text-primary-dim opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 2 -->
+        <div
+          class="bg-surface-container-lowest group relative rounded-[1.5rem] p-6 hover:translate-y-[-4px] transition-all duration-300">
+          <div
+            class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-[1.5rem]">
+          </div>
+          <div class="relative z-10">
+            <div class="flex justify-between items-start mb-6">
+              <div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-3xl">water_drop</span>
+              </div>
+              <span
+                class="text-[10px] font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded">LIFETIME</span>
+            </div>
+            <h4 class="text-lg font-bold text-on-surface mb-1">Hydration Sentinel</h4>
+            <p class="text-xs text-on-surface-variant mb-4">IoT Soil Moisture System</p>
+            <div class="flex items-center justify-between pt-4 border-t border-surface-container/50">
+              <div>
+                <p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Purchased</p>
+                <p class="text-sm font-semibold text-on-surface">Nov 02, 2023</p>
+              </div>
+              <span
+                class="material-symbols-outlined text-primary-dim opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 3 -->
+        <div
+          class="bg-surface-container-lowest group relative rounded-[1.5rem] p-6 hover:translate-y-[-4px] transition-all duration-300">
+          <div
+            class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-[1.5rem]">
+          </div>
+          <div class="relative z-10">
+            <div class="flex justify-between items-start mb-6">
+              <div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-3xl">auto_videocam</span>
+              </div>
+              <span
+                class="text-[10px] font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded">SUBSCRIPTION</span>
+            </div>
+            <h4 class="text-lg font-bold text-on-surface mb-1">Growth-Lapse Cloud</h4>
+            <p class="text-xs text-on-surface-variant mb-4">Timelapse &amp; AI Health Analysis</p>
+            <div class="flex items-center justify-between pt-4 border-t border-surface-container/50">
+              <div>
+                <p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Purchased</p>
+                <p class="text-sm font-semibold text-on-surface">Aug 22, 2023</p>
+              </div>
+              <span
+                class="material-symbols-outlined text-primary-dim opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Activity Timeline / History -->
+    <section>
+      <h3 class="text-lg font-bold text-on-surface tracking-tight mb-6">Interaction History</h3>
+      <div class="space-y-4">
+        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container-low transition-colors group">
+          <div
+            class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container mt-1">
+            <span class="material-symbols-outlined text-lg">local_shipping</span>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h5 class="font-bold text-on-surface">Replacement Sensors Shipped</h5>
+              <span class="text-xs text-on-surface-variant font-label">2 HOURS AGO</span>
+            </div>
+            <p class="text-sm text-on-surface-variant mt-1">Order #BOT-9921 for Hydration Sentinel component has been
+              dispatched via UPS.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container-low transition-colors group">
+          <div
+            class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container mt-1">
+            <span class="material-symbols-outlined text-lg">chat</span>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h5 class="font-bold text-on-surface">Support Ticket Resolved</h5>
+              <span class="text-xs text-on-surface-variant font-label">YESTERDAY</span>
+            </div>
+            <p class="text-sm text-on-surface-variant mt-1">Elena contacted regarding growth-lapse calibration.
+              Resolution: remote firmware update applied.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Modal Backdrop (Hidden by default, shown here as a concept for the 'Link New Product' flow) -->
+  <!-- This section is purely illustrative of the requested modal/panel capability -->
+  <div class="fixed inset-0 bg-on-surface/20 backdrop-blur-sm z-[100] hidden items-center justify-center">
+    <div class="w-full max-w-lg bg-surface-container-lowest rounded-[2.5rem] p-10 shadow-2xl">
+      <div class="flex justify-between items-center mb-8">
+        <h3 class="text-2xl font-bold">Link New Product</h3>
+        <button
+          class="w-10 h-10 rounded-full hover:bg-surface-container-low transition-colors flex items-center justify-center">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="space-y-6">
+        <div>
+          <label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2">Select
+            Product</label>
+          <select
+            class="w-full bg-surface-container-highest border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary">
+            <option>Rainforest Canopy Mist System</option>
+            <option>Alpine Bloom Nutrient Pack</option>
+            <option>Digital Flora Encyclopedia</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2">License Key
+            / Serial</label>
+          <input
+            class="w-full bg-surface-container-highest border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all"
+            placeholder="XXXX-XXXX-XXXX" type="text" />
+        </div>
+        <button
+          class="w-full bg-primary text-on-primary py-4 rounded-2xl font-bold shadow-lg shadow-primary/20 hover:opacity-95 transition-opacity mt-4">
+          Confirm Product Link
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

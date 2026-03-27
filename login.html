@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-surface": "#0b0f0e",
+            "surface-container-high": "#e2eae7",
+            "outline-variant": "#abb4b1",
+            "surface-dim": "#d3dcd9",
+            "on-surface-variant": "#58615f",
+            "surface-container": "#e9efed",
+            "surface-tint": "#4c6456",
+            "on-primary-fixed-variant": "#496152",
+            "inverse-primary": "#d9f5e2",
+            "primary-dim": "#40584a",
+            "primary-fixed": "#cee9d6",
+            "on-primary-fixed": "#2d4437",
+            "on-surface": "#2c3432",
+            "inverse-on-surface": "#9a9e9c",
+            "on-error-container": "#6e0a12",
+            "secondary-container": "#c4eaea",
+            "surface-variant": "#dbe4e2",
+            "tertiary": "#6f5c47",
+            "surface-container-highest": "#dbe4e2",
+            "on-secondary-container": "#355759",
+            "on-secondary-fixed": "#214546",
+            "on-secondary-fixed-variant": "#3e6162",
+            "tertiary-dim": "#62503c",
+            "secondary": "#426566",
+            "secondary-fixed-dim": "#b6dbdc",
+            "secondary-fixed": "#c4eaea",
+            "on-tertiary-fixed": "#4f3e2b",
+            "error-container": "#fa746f",
+            "tertiary-fixed-dim": "#edd3b9",
+            "tertiary-fixed": "#fce1c6",
+            "on-background": "#2c3432",
+            "primary": "#4c6456",
+            "on-error": "#fff7f6",
+            "on-primary-container": "#3f5749",
+            "on-primary": "#e6ffed",
+            "primary-container": "#cee9d6",
+            "error": "#a83836",
+            "surface-container-low": "#f0f5f2",
+            "surface": "#f7faf8",
+            "secondary-dim": "#36595a",
+            "surface-bright": "#f7faf8",
+            "on-tertiary-container": "#63503c",
+            "on-tertiary-fixed-variant": "#6d5a45",
+            "error-dim": "#67040d",
+            "tertiary-container": "#fce1c6",
+            "outline": "#747d7a",
+            "primary-fixed-dim": "#c0dbc9",
+            "background": "#f7faf8",
+            "on-tertiary": "#fff7f3",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary": "#e1ffff"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .botanical-mask {
+      mask-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M200 0C200 0 200 89.543 110.457 89.543C20.9139 89.543 20.9139 0 20.9139 0V400H379.086V0C379.086 0 379.086 89.543 289.543 89.543C200 89.543 200 0 200 0Z' fill='black'/%3E%3C/svg%3E");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background font-body text-on-background min-h-screen flex items-center justify-center relative overflow-hidden">
+  <!-- Aesthetic Background Elements -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-container/30 rounded-full blur-[120px]">
+    </div>
+    <div class="absolute bottom-[-5%] right-[-5%] w-[30%] h-[30%] bg-secondary-container/20 rounded-full blur-[100px]">
+    </div>
+  </div>
+  <!-- Login Container -->
+  <main
+    class="relative z-10 w-full max-w-[1100px] grid md:grid-cols-2 bg-surface-container-lowest rounded-[2rem] shadow-2xl shadow-on-surface/5 overflow-hidden mx-4">
+    <!-- Left Side: Brand Visual & Narrative -->
+    <section class="hidden md:flex flex-col justify-between p-12 bg-surface-container-low relative overflow-hidden">
+      <div class="relative z-20">
+        <div class="flex items-center gap-3 mb-12">
+          <span class="material-symbols-outlined text-primary text-4xl" data-icon="energy_savings_leaf"
+            style="font-variation-settings: 'FILL' 1;"></span>
+          <h1 class="font-headline font-extrabold text-3xl tracking-tight text-on-surface">relo</h1>
+        </div>
+        <div class="space-y-6">
+          <h2 class="font-headline text-5xl font-bold text-on-surface leading-tight tracking-tight">
+            The Digital <br /><span class="text-primary">Botanical Archivist</span>
+          </h2>
+          <p class="text-on-surface-variant text-lg max-w-sm leading-relaxed">
+            Curate your customer relationships with the precision of a master gardener. A systematic workspace designed
+            for growth.
+          </p>
+        </div>
+      </div>
+      <div class="relative z-20 mt-12 p-6 bg-surface-container-lowest/60 backdrop-blur-md rounded-2xl">
+        <div class="flex items-center gap-4 mb-3">
+          <img alt="Profile of lead designer" class="w-10 h-10 rounded-full object-cover"
+            data-alt="close-up portrait of a thoughtful woman in a sunlit creative studio surrounded by green plants"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCURQIKtExoJenWqCKY64zAkFO-nQdEQSFOycScV5IQjEzu3iT29b8gLiJ33YqRoudY_cJxwZl5qbDUzxDmUNj6j4IAexgi63v3VUMMuR-Mw7-ih4Pvu_OW8NbfoE29Rmx59sRIwv98BW6b3V9_iqrln7d2tm2hKNJXPoYgBUpOCH6CdAoTGddL36t7AQ8U-QI8fKshpJYxKp_s-gFrVs6TXAEkGVg3QbAxx7aRO_6DplDBETXyoMwjGcI7Axadta_RZKsoTYa41Dg" />
+          <div>
+            <p class="text-sm font-bold text-on-surface">Elena Vance</p>
+            <p class="text-xs text-on-surface-variant">Archivist Lead at Verdant Systems</p>
+          </div>
+        </div>
+        <p class="text-sm italic text-on-surface-variant leading-relaxed">
+          "Relo transformed our chaotic spreadsheet data into a breathing, organic ecosystem of organized customer
+          insights."
+        </p>
+      </div>
+      <!-- Background Texture for Left Column -->
+      <div class="absolute bottom-0 right-0 opacity-10 pointer-events-none translate-x-1/4 translate-y-1/4">
+        <span class="material-symbols-outlined text-[400px]" data-icon="eco"></span>
+      </div>
+    </section>
+    <!-- Right Side: Login Form -->
+    <section class="p-8 md:p-16 flex flex-col justify-center">
+      <div class="mb-10 block md:hidden">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-3xl" data-icon="energy_savings_leaf"
+            style="font-variation-settings: 'FILL' 1;"></span>
+          <h1 class="font-headline font-extrabold text-2xl tracking-tight text-on-surface">relo</h1>
+        </div>
+      </div>
+      <header class="mb-8">
+        <h3 class="font-headline text-3xl font-bold text-on-surface mb-2">Welcome back</h3>
+        <p class="text-on-surface-variant font-medium">Access your botanical archive.</p>
+      </header>
+      <!-- SSO Options -->
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <button
+          class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container rounded-xl hover:bg-surface-container-high transition-all active:scale-[0.98]">
+          <img alt="Google Logo" class="w-5 h-5"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRt5TCN9ZWKkfvJ82bRq9Gol-Pil3j41sNBFkO5hnv1eanUYGpJnInw1KNBgRU8ktCofT_RowYQ9_dIJeWmkGuUWc00LVnFHbG-4YJtmIN4hyankjuQpa2fOisB1-gfmda1bfOsIjpm6kfhDsJKZVn6cYC_KIyX19IKfsAWku2va4zq2LAqn7v65INb9fiF7Plh7Oe6Qc3che28w6T51I_S-bBYZIEug6TJNsf8yTp7yut2qYJ-D0cYqGYy9X7rFbHGkoayooZRJY" />
+          <span class="font-label text-sm font-semibold text-on-surface">Google</span>
+        </button>
+        <button
+          class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container rounded-xl hover:bg-surface-container-high transition-all active:scale-[0.98]">
+          <img alt="Microsoft Logo" class="w-5 h-5"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkGOTroq6wwnljSA8TQrbugsDM7uNGwsZF9dQaQAyPd_qmoeFtiy-tTuXzhHgTZWSbTy0z7st-cZDJCYfPNOXx3a7q2tknCJqj6lEwvsySj0KyGUSntqjN3cqodzSOGMxvnRF1LI3q56VP_sHtglih1_d1sH99btmVFMo0YQgqiU8Z4vn_NQdcgIbkdCdL0LVUx4n5Rn6FaGhQjLzWr_zDHOV2UG7PUjbv15bTCgjI5YY8XPoOWHMlR5wlVpXCa0hkTq3UoRnZ7bM" />
+          <span class="font-label text-sm font-semibold text-on-surface">Microsoft</span>
+        </button>
+      </div>
+      <div class="relative flex py-5 items-center mb-8">
+        <div class="flex-grow border-t border-outline-variant/20"></div>
+        <span class="flex-shrink mx-4 font-label text-xs uppercase tracking-widest text-on-surface-variant/60">or sign
+          in with email</span>
+        <div class="flex-grow border-t border-outline-variant/20"></div>
+      </div>
+      <form class="space-y-6">
+        <div class="space-y-2">
+          <label class="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1"
+            for="username">Username</label>
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl"
+              data-icon="alternate_email"></span>
+            <input
+              class="w-full pl-12 pr-4 py-3.5 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-on-surface-variant/40 text-on-surface font-body"
+              id="username" placeholder="botanist_01" type="text" />
+          </div>
+        </div>
+        <div class="space-y-2">
+          <div class="flex justify-between items-center px-1">
+            <label class="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant"
+              for="password">Password</label>
+            <a class="text-xs font-bold text-primary hover:text-primary-dim transition-colors" href="#">Forgot?</a>
+          </div>
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl"
+              data-icon="lock"></span>
+            <input
+              class="w-full pl-12 pr-4 py-3.5 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-on-surface-variant/40 text-on-surface font-body"
+              id="password" placeholder="••••••••" type="password" />
+          </div>
+        </div>
+        <a class="w-full py-4 bg-primary text-on-primary font-headline font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-dim hover:shadow-primary/30 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group"
+          type="submit" href="dashboard.html">
+          Login
+          <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform"
+            data-icon="arrow_forward"></span>
+        </a>
+      </form>
+      <footer class="mt-12 text-center">
+        <p class="text-sm text-on-surface-variant">
+          New to the archive? <a class="text-primary font-bold hover:underline" href="#">Request Access</a>
+        </p>
+      </footer>
+    </section>
+  </main>
+  <!-- Bottom Aesthetic Detail -->
+  <div class="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-8 opacity-40 pointer-events-none">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-xs" data-icon="circle"
+        style="font-variation-settings: 'FILL' 1;"></span>
+      <span class="text-[10px] font-label uppercase tracking-[0.2em] text-on-surface-variant">System Status:
+        Optimal</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-xs" data-icon="circle"
+        style="font-variation-settings: 'FILL' 1;"></span>
+      <span class="text-[10px] font-label uppercase tracking-[0.2em] text-on-surface-variant">v2.4.0 Redwood</span>
+    </div>
+  </div>
+</body>
+
+</html>
