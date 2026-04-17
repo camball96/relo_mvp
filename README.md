@@ -12,6 +12,11 @@ No frameworks. No backend. No working buttons (well, mostly). Just vibes.
 
 ---
 
+## Where to view
+You can preview this here - https://camball96.github.io/relo_mvp/index.html - No need for login info, just click the login button!
+
+---
+
 ## Pages
 
 | Page      | URL              | Description                                          |
